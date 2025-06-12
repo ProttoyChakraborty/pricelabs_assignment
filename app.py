@@ -8,6 +8,8 @@ import calendar
 # Initialize the Dash app
 app = dash.Dash(__name__)
 
+server = app.server
+
 # Load and process the data
 def load_data():
     """Load and process the CSV data for year-over-year analysis"""

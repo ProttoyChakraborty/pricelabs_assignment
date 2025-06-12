@@ -27,6 +27,9 @@ Note - The original csv file has been renamed to 'data.csv' in this repository.
 
 2) The `analysis.ipynb` notebook contains code and visualization for the outlier detection and removal
 
-3) (<b> BONUS TASK </b>)The `forcast.ipynb` notebook contains the code for future forcasting using the given historical data. The results of the prediction of each day of Feb 2022 are in the `february_2022_forecast.csv` file.
+3) (<b> BONUS TASK </b>)The `forecast.ipynb` notebook contains the code for future forcasting using the given historical data. The results of the prediction of each day of Feb 2022 are in the `february_2022_forecast.csv` file.
+
+
+
 
 
