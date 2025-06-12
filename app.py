@@ -296,7 +296,12 @@ def create_summary_stats_chart(df):
         title='Annual Price Statistics Comparison',
         xaxis_title='Year',
         yaxis_title='Price ($)',
-        barmode='group'
+        barmode='group',
+        xaxis=dict(
+            type='category',
+        tickmode='array',
+        tickvals=stats['Year']
+    )
     )
     
     return fig
@@ -308,7 +313,6 @@ def create_volatility_chart(df):
     }).round(2)
     volatility.columns = ['StdDev', 'RangePercent']
     volatility = volatility.reset_index()
-    
     fig = go.Figure()
     
     fig.add_trace(go.Bar(
@@ -334,7 +338,12 @@ def create_volatility_chart(df):
         xaxis_title='Year',
         yaxis=dict(title='Standard Deviation ($)', side='left'),
         yaxis2=dict(title='Range as % of Mean', side='right', overlaying='y'),
-        legend=dict(x=0.01, y=0.99)
+        legend=dict(x=0.01, y=0.99),
+        xaxis=dict(
+        type='category',
+        tickmode='array',
+        tickvals=volatility['Year']
+    )
     )
     
     return fig

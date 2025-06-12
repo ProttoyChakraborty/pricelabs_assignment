@@ -24,6 +24,7 @@ Note - The original csv file has been renamed to 'data.csv' in this repository.
     python app.py
     ```
     </ul>  
+    The app is deployed at https://pricelabs-dashboard.onrender.com/ ( might take some time to load due to free tier)
 
 2) The `analysis.ipynb` notebook contains code and visualization for the outlier detection and removal
 
