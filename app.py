@@ -212,7 +212,7 @@ def create_quarterly_chart(df):
     for i, year in enumerate(sorted(quarterly_data['Year'].unique())):
         year_data = quarterly_data[quarterly_data['Year'] == year]
         
-        # Add average line
+       
         fig.add_trace(go.Scatter(
             x=year_data['Quarter'],
             y=year_data['AvgPrice'],
@@ -223,7 +223,7 @@ def create_quarterly_chart(df):
             hovertemplate=f'<b>{year} Q%{{x}}</b><br>Avg: $%{{y:.2f}}<extra></extra>'
         ))
         
-        # Add range as filled area
+        
         fig.add_trace(go.Scatter(
             x=list(year_data['Quarter']) + list(year_data['Quarter'])[::-1],
             y=list(year_data['MaxPrice']) + list(year_data['MinPrice'])[::-1],
@@ -286,7 +286,7 @@ def create_summary_stats_chart(df):
     
     fig = go.Figure()
     
-    # Add traces for each statistic
+    
     fig.add_trace(go.Bar(x=stats['Year'], y=stats['Mean'], name='Mean', 
                         marker_color='lightblue', opacity=0.8))
     fig.add_trace(go.Bar(x=stats['Year'], y=stats['Median'], name='Median', 
